@@ -22,7 +22,13 @@ fn main() {
 fn load_resources(path: &str) -> Vec<Resource> {
     let file = File::open(path).unwrap();
     let reader = BufReader::new(file);
-    return from_reader(reader).unwrap();
+    return match from_reader(reader) {
+        Ok(x) => x,
+        Err(e) => {
+            eprintln!("Error deserializing: {}", e);
+            std::process::exit(1);
+        }
+    };
 }
 
 fn load_recipes(path: &str) -> Vec<Recipe> {

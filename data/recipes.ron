@@ -10,6 +10,26 @@
     time: 15,
   ),
   (
+    creates: [(2, Hydrogen), (1, Oxygen)],
+    consumes: [(1, CleanWater)],
+    time: 900,
+  ),
+  (
+    creates: [(1, Glass)],
+    consumes: [(2, Silicon)],
+    time: 60,
+  ),
+  (
+    creates: [(1, LabFlask)],
+    consumes: [(1, Glass)],
+    time: 60,
+  ),
+  (
+    creates: [(1, CleanWater)],
+    consumes: [(1, LabFlask), (1, Water)],
+    time: 600,
+  ),
+  (
     creates: [(10, CopperNail)],
     consumes: [(1, CopperBar)],
     time: 20,
@@ -33,5 +53,10 @@
     creates: [(1, Battery)],
     consumes: [(1, Amber), (1, IronBar), (5, CopperBar)],
     time: 120,
+  ),
+  (
+    creates: [(1, Circuits)],
+    consumes: [(10, IronBar), (50, Graphite), (20, CopperBar)],
+    time: 180,
   ),
 ]

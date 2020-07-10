@@ -6,19 +6,34 @@ pub enum ResourceType {
     Copper,
     Iron,
     Amber,
+    Water,
+    Aluminium,
+    Silver,
+    TreeSeed,
+    Gold,
     CopperBar,
     IronBar,
+    Silicon,
+    Hydrogen,
+    Glass,
+    LabFlask,
+    Oxygen,
+    CleanWater,
     CopperNail,
     Graphite,
     Wire,
     Lamp,
     Battery,
+    Circuits,
     Last, // Always last, could be used to calculate the length of this enum
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub enum Source {
     Mine,
+    WaterCollector,
+    ChemicalMine,
+    Chemistry,
     Smelt,
     Craft,
 }
