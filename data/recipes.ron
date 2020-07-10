@@ -10,6 +10,11 @@
     time: 15,
   ),
   (
+    creates: [(1, AluminiumBar)],
+    consumes: [(5, Aluminium)],
+    time: 15,
+  ),
+  (
     creates: [(2, Hydrogen), (1, Oxygen)],
     consumes: [(1, CleanWater)],
     time: 900,
@@ -30,9 +35,19 @@
     time: 600,
   ),
   (
+    creates: [(1, AluminiumBottle)],
+    consumes: [(1, AluminiumBar)],
+    time: 30,
+  ),
+  (
     creates: [(10, CopperNail)],
     consumes: [(1, CopperBar)],
     time: 20,
+  ),
+  (
+    creates: [(1, InsulatedWire)],
+    consumes: [(1, Wire), (1, AmberInsulation)],
+    time: 200,
   ),
   (
     creates: [(1, Graphite)],
@@ -45,9 +60,19 @@
     time: 30,
   ),
   (
+    creates: [(1, AmberInsulation)],
+    consumes: [(10, Amber), (1, AluminiumBottle)],
+    time: 20,
+  ),
+  (
     creates: [(1, Lamp)],
     consumes: [(5, CopperBar), (10, Wire), (20, Graphite)],
     time: 80,
+  ),
+  (
+    creates: [(1, AmberCharger)],
+    consumes: [(1, Amber)],
+    time: 5,
   ),
   (
     creates: [(1, Battery)],

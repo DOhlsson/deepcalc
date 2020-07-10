@@ -55,6 +55,11 @@
     price: 40,
   ),
   (
+    resource_type: AluminiumBar,
+    source: Smelt,
+    price: 50,
+  ),
+  (
     resource_type: Silicon,
     source: ChemicalMine,
     price: 100,
@@ -85,9 +90,19 @@
     price: 1200,
   ),
   (
+    resource_type: AluminiumBottle,
+    source: Craft,
+    price: 55,
+  ),
+  (
     resource_type: CopperNail,
     source: Craft,
     price: 7,
+  ),
+  (
+    resource_type: InsulatedWire,
+    source: Craft,
+    price: 750,
   ),
   (
     resource_type: Graphite,
@@ -100,9 +115,19 @@
     price: 15,
   ),
   (
+    resource_type: AmberInsulation,
+    source: Craft,
+    price: 125,
+  ),
+  (
     resource_type: Lamp,
     source: Craft,
     price: 760,
+  ),
+  (
+    resource_type: AmberCharger,
+    source: Craft,
+    price: 4,
   ),
   (
     resource_type: Battery,
