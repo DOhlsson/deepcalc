@@ -1,9 +1,11 @@
 #[macro_use]
 extern crate prettytable;
 
+mod data;
 mod model;
 
-use model::*;
+use data::Data;
+use model::{Recipe, Resource};
 use ron::de::from_reader;
 use std::fs::File;
 use std::io::BufReader;
