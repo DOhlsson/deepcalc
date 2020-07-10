@@ -1,3 +1,4 @@
+use prettytable::Table;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug, PartialEq)]
@@ -70,12 +71,44 @@ impl Data {
         Data { resources, recipes }
     }
 
+    pub fn print_resources(&self) {
+        let mut table = Table::new();
+        table.add_row(row!["Type", "Source", "Price",]);
+
+        for resource in &self.resources {
+            table.add_row(row![
+                format!("{:?}", resource.resource_type),
+                format!("{:?}", resource.source),
+                resource.price,
+            ]);
+        }
+
+        table.printstd();
+    }
+
     pub fn evaluate_recipes(&self) {
+        let mut table = Table::new();
+        table.add_row(row![
+            "Creates",
+            "Net value",
+            "Net value/s",
+            "Gross value",
+            "Consumed value",
+        ]);
+
         for recipe in &self.recipes {
             let ev = self.evaluate_recipe(recipe);
-            println!("{:?}", recipe);
-            println!("{:?}\n", ev);
+
+            table.add_row(row![
+                format!("{:?}", recipe.creates),
+                format!("{:?}", ev.net_value),
+                format!("{:?}", ev.net_value_sec),
+                format!("{:?}", ev.gross_value),
+                format!("{:?}", ev.consumed_value),
+            ]);
         }
+
+        table.printstd();
     }
 
     fn evaluate_recipe(&self, recipe: &Recipe) -> Evaluation {
