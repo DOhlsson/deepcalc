@@ -1,11 +1,7 @@
 [
   (
-    creates: [
-      (1, Graphite),
-    ],
-    consumes: [
-      (5, Coal),
-    ],
+    creates: [(1, Graphite)],
+    consumes: [(5, Coal)],
     time: 5,
   ),
 ]

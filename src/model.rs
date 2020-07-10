@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Copy, Clone, Serialize, Deserialize, Debug, PartialEq)]
+#[derive(Serialize, Deserialize, Debug, PartialEq)]
 pub enum ResourceType {
     Coal,
     Graphite,
@@ -30,12 +30,6 @@ pub struct Recipe {
     creates: Vec<(i32, ResourceType)>,
     consumes: Vec<(i32, ResourceType)>,
     time: i32,
-}
-
-impl Recipe {
-    pub fn evaluate(&self) {
-        //println!("asdf {:?}", self.creates.1 as i32);
-    }
 }
 
 impl Data {
