@@ -100,11 +100,11 @@ impl Data {
             let ev = self.evaluate_recipe(recipe);
 
             table.add_row(row![
-                format!("{:?}", recipe.creates),
-                format!("{:?}", ev.net_value),
-                format!("{:?}", ev.net_value_sec),
-                format!("{:?}", ev.gross_value),
-                format!("{:?}", ev.consumed_value),
+                bill_as_string(&recipe.creates),
+                format!("{}", ev.net_value),
+                format!("{:.2}", ev.net_value_sec),
+                format!("{}", ev.gross_value),
+                format!("{}", ev.consumed_value),
             ]);
         }
 
@@ -142,4 +142,12 @@ impl Data {
             .find(|r| *rtype == r.resource_type)
             .unwrap()
     }
+}
+
+fn bill_as_string(bill: &Vec<(i32, ResourceType)>) -> String {
+    return bill
+        .iter()
+        .map(|r| format!("{} {:?}", r.0, r.1))
+        .collect::<Vec<String>>()
+        .join(", ");
 }
