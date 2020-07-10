@@ -13,6 +13,7 @@ pub struct Evaluation {
     gross_value: i32,
     consumed_value: i32,
     raw_material_value: i32,
+    ttm: i32,
 }
 
 impl Data {
@@ -44,6 +45,7 @@ impl Data {
             "Gross value",
             "Consumed value",
             "Raw material value",
+            "TTM",
         ]);
 
         for recipe in &self.recipes {
@@ -56,6 +58,7 @@ impl Data {
                 format!("{}", ev.gross_value),
                 format!("{}", ev.consumed_value),
                 format!("{}", ev.raw_material_value),
+                format!("{}", ev.ttm),
             ]);
         }
 
@@ -66,6 +69,7 @@ impl Data {
         let mut consumed_value = 0;
         let mut gross_value = 0;
         let mut raw_material_value = 0;
+        let mut ttm = recipe.time;
 
         for r in &recipe.creates {
             let res = self.get_resource(&r.1);
@@ -79,7 +83,9 @@ impl Data {
             // Calculate values based on sub-recipes
             match self.get_recipe_for(&r.1) {
                 Some(sub_recipe) => {
-                    raw_material_value += self.evaluate_recipe(sub_recipe).raw_material_value * r.0;
+                    let sub_ev = self.evaluate_recipe(sub_recipe);
+                    raw_material_value += sub_ev.raw_material_value * r.0;
+                    ttm += sub_ev.ttm * r.0;
                 }
                 None => raw_material_value += res.price * r.0,
             };
@@ -94,6 +100,7 @@ impl Data {
             gross_value,
             consumed_value,
             raw_material_value,
+            ttm,
         };
     }
 
