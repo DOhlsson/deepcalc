@@ -1,7 +1,27 @@
 [
   (
+    creates: [(1, Copper_bar)],
+    consumes: [(5, Copper)],
+    time: 10,
+  ),
+  (
+    creates: [(10, Copper_nail)],
+    consumes: [(1, Copper_bar)],
+    time: 20,
+  ),
+  (
     creates: [(1, Graphite)],
     consumes: [(5, Coal)],
     time: 5,
+  ),
+  (
+    creates: [(5, Wire)],
+    consumes: [(1, Copper_bar)],
+    time: 30,
+  ),
+  (
+    creates: [(1, Lamp)],
+    consumes: [(5, Copper_bar), (10, Wire), (20, Graphite)],
+    time: 80,
   ),
 ]

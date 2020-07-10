@@ -5,8 +5,33 @@
     price: 1,
   ),
   (
+    resource_type: Copper,
+    source: Mine,
+    price: 2,
+  ),
+  (
+    resource_type: Copper_bar,
+    source: Smelt,
+    price: 25,
+  ),
+  (
+    resource_type: Copper_nail,
+    source: Craft,
+    price: 7,
+  ),
+  (
     resource_type: Graphite,
     source: Craft,
     price: 15,
+  ),
+  (
+    resource_type: Wire,
+    source: Craft,
+    price: 15,
+  ),
+  (
+    resource_type: Lamp,
+    source: Craft,
+    price: 760,
   ),
 ]

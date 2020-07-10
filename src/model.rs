@@ -3,14 +3,20 @@ use serde::{Deserialize, Serialize};
 #[derive(Serialize, Deserialize, Debug, PartialEq)]
 pub enum ResourceType {
     Coal,
+    Copper,
+    Copper_bar,
+    Copper_nail,
     Graphite,
-    Last, // Always last, used to calculate the length of this enum
+    Wire,
+    Lamp,
+    Last, // Always last, could be used to calculate the length of this enum
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub enum Source {
-    Craft,
     Mine,
+    Smelt,
+    Craft,
 }
 
 pub struct Data {
@@ -49,7 +55,7 @@ impl Data {
         for recipe in &self.recipes {
             let ev = self.evaluate_recipe(recipe);
             println!("{:?}", recipe);
-            println!("{:?}", ev);
+            println!("{:?}\n", ev);
         }
     }
 
