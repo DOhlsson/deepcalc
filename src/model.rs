@@ -18,6 +18,14 @@ pub struct Data {
     recipes: Vec<Recipe>,
 }
 
+#[derive(Debug)]
+pub struct Evaluation {
+    net_value: i32,
+    net_value_sec: i32,
+    gross_value: i32,
+    consumed_value: i32,
+}
+
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Resource {
     resource_type: ResourceType,
@@ -39,25 +47,35 @@ impl Data {
 
     pub fn evaluate_recipes(&self) {
         for recipe in &self.recipes {
-            self.evaluate_recipe(recipe);
+            let ev = self.evaluate_recipe(recipe);
+            println!("{:?}", recipe);
+            println!("{:?}", ev);
         }
     }
 
-    fn evaluate_recipe(&self, recipe: &Recipe) {
-        let mut created_value = 0;
+    fn evaluate_recipe(&self, recipe: &Recipe) -> Evaluation {
+        let mut consumed_value = 0;
+        let mut gross_value = 0;
 
         for r in &recipe.creates {
             let res = self.get_resource(&r.1);
-            created_value += res.price * r.0;
+            gross_value += res.price * r.0;
         }
 
         for r in &recipe.consumes {
             let res = self.get_resource(&r.1);
-            created_value -= res.price * r.0;
+            consumed_value += res.price * r.0;
         }
 
-        println!("{:?}", recipe);
-        println!("  created_value: {}", created_value);
+        let net_value = gross_value - consumed_value;
+        let net_value_sec = net_value / recipe.time;
+
+        return Evaluation {
+            net_value,
+            net_value_sec,
+            gross_value,
+            consumed_value,
+        };
     }
 
     fn get_resource(&self, rtype: &ResourceType) -> &Resource {
