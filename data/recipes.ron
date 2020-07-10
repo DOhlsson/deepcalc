@@ -1,12 +1,17 @@
 [
   (
-    creates: [(1, Copper_bar)],
+    creates: [(1, CopperBar)],
     consumes: [(5, Copper)],
     time: 10,
   ),
   (
-    creates: [(10, Copper_nail)],
-    consumes: [(1, Copper_bar)],
+    creates: [(1, IronBar)],
+    consumes: [(5, Iron)],
+    time: 15,
+  ),
+  (
+    creates: [(10, CopperNail)],
+    consumes: [(1, CopperBar)],
     time: 20,
   ),
   (
@@ -16,12 +21,17 @@
   ),
   (
     creates: [(5, Wire)],
-    consumes: [(1, Copper_bar)],
+    consumes: [(1, CopperBar)],
     time: 30,
   ),
   (
     creates: [(1, Lamp)],
-    consumes: [(5, Copper_bar), (10, Wire), (20, Graphite)],
+    consumes: [(5, CopperBar), (10, Wire), (20, Graphite)],
     time: 80,
+  ),
+  (
+    creates: [(1, Battery)],
+    consumes: [(1, Amber), (1, IronBar), (5, CopperBar)],
+    time: 120,
   ),
 ]

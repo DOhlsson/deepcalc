@@ -10,12 +10,27 @@
     price: 2,
   ),
   (
-    resource_type: Copper_bar,
+    resource_type: Iron,
+    source: Mine,
+    price: 3,
+  ),
+  (
+    resource_type: Amber,
+    source: Mine,
+    price: 4,
+  ),
+  (
+    resource_type: CopperBar,
     source: Smelt,
     price: 25,
   ),
   (
-    resource_type: Copper_nail,
+    resource_type: IronBar,
+    source: Smelt,
+    price: 40,
+  ),
+  (
+    resource_type: CopperNail,
     source: Craft,
     price: 7,
   ),
@@ -33,5 +48,10 @@
     resource_type: Lamp,
     source: Craft,
     price: 760,
+  ),
+  (
+    resource_type: Battery,
+    source: Craft,
+    price: 200,
   ),
 ]

@@ -4,11 +4,15 @@ use serde::{Deserialize, Serialize};
 pub enum ResourceType {
     Coal,
     Copper,
-    Copper_bar,
-    Copper_nail,
+    Iron,
+    Amber,
+    CopperBar,
+    IronBar,
+    CopperNail,
     Graphite,
     Wire,
     Lamp,
+    Battery,
     Last, // Always last, could be used to calculate the length of this enum
 }
 
@@ -27,7 +31,7 @@ pub struct Data {
 #[derive(Debug)]
 pub struct Evaluation {
     net_value: i32,
-    net_value_sec: i32,
+    net_value_sec: f64,
     gross_value: i32,
     consumed_value: i32,
 }
@@ -74,7 +78,7 @@ impl Data {
         }
 
         let net_value = gross_value - consumed_value;
-        let net_value_sec = net_value / recipe.time;
+        let net_value_sec = net_value as f64 / recipe.time as f64;
 
         return Evaluation {
             net_value,
