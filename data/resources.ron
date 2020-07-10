@@ -1,0 +1,12 @@
+[
+  (
+    resource_type: Coal,
+    source: Mine,
+    price: 1,
+  ),
+  (
+    resource_type: Graphite,
+    source: Craft,
+    price: 15,
+  ),
+]
