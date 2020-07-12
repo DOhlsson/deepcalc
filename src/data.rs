@@ -5,6 +5,7 @@ pub struct Data {
     resources: Vec<Resource>,
     recipes: Vec<Recipe>,
     mines: Vec<Mine>,
+    buildings: Vec<Building>,
 }
 
 #[derive(Debug)]
@@ -18,17 +19,23 @@ pub struct Evaluation {
 }
 
 impl Data {
-    pub fn new(resources: Vec<Resource>, recipes: Vec<Recipe>, mines: Vec<Mine>) -> Self {
+    pub fn new(
+        resources: Vec<Resource>,
+        recipes: Vec<Recipe>,
+        mines: Vec<Mine>,
+        buildings: Vec<Building>,
+    ) -> Self {
         Data {
             resources,
             recipes,
             mines,
+            buildings,
         }
     }
 
     pub fn print_resources(&self) {
         let mut table = Table::new();
-        table.add_row(row!["Type", "Price",]);
+        table.add_row(row!["Type", "Price"]);
 
         for resource in &self.resources {
             table.add_row(row![
@@ -42,12 +49,28 @@ impl Data {
 
     pub fn print_mines(&self) {
         let mut table = Table::new();
-        table.add_row(row!["Area", "Resources (%)",]);
+        table.add_row(row!["Area", "Resources (%)"]);
 
         for mine in &self.mines {
             table.add_row(row![
                 format!("{}", mine.area),
                 bill_as_string(&mine.resources),
+            ]);
+        }
+
+        table.printstd();
+    }
+
+    pub fn print_buildings(&self) {
+        let mut table = Table::new();
+        table.add_row(row!["Type", "Level", "Speed", "Capacity"]);
+
+        for building in &self.buildings {
+            table.add_row(row![
+                format!("{:?}", building.building_type),
+                format!("{}", building.level),
+                format!("{}", building.speed),
+                format!("{}", building.capacity),
             ]);
         }
 

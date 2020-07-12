@@ -35,8 +35,8 @@ pub enum ResourceType {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub enum Building {
-    Mine,
+pub enum BuildingType {
+    MiningStation,
     WaterCollector,
     ChemicalMine,
     Chemistry,
@@ -54,7 +54,7 @@ pub struct Resource {
 pub struct Recipe {
     pub creates: Vec<(i32, ResourceType)>,
     pub consumes: Vec<(i32, ResourceType)>,
-    pub building: Building,
+    pub building: BuildingType,
     pub time: i32,
 }
 
@@ -62,4 +62,12 @@ pub struct Recipe {
 pub struct Mine {
     pub area: i32,
     pub resources: Vec<(i32, ResourceType)>, // Resources by percent
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Building {
+    pub building_type: BuildingType,
+    pub level: i32,
+    pub speed: i32,
+    pub capacity: i32,
 }

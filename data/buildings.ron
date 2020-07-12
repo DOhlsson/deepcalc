@@ -1,0 +1,32 @@
+[
+  (
+    building_type: MiningStation,
+    level: 1,
+    speed: 3,
+    capacity: 40,
+  ),
+  (
+    building_type: MiningStation,
+    level: 2,
+    speed: 4,
+    capacity: 45,
+  ),
+  (
+    building_type: MiningStation,
+    level: 3,
+    speed: 5,
+    capacity: 50,
+  ),
+  (
+    building_type: MiningStation,
+    level: 4,
+    speed: 6,
+    capacity: 55,
+  ),
+  (
+    building_type: MiningStation,
+    level: 5,
+    speed: 8,
+    capacity: 70,
+  ),
+]
