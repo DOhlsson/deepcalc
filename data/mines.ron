@@ -1,0 +1,285 @@
+[
+  (
+    area: 1,
+    resources: [
+      (100, Coal),
+    ],
+  ),
+  (
+    area: 2,
+    resources: [
+      (70, Coal),
+      (30, Copper),
+    ],
+  ),
+  (
+    area: 3,
+    resources: [
+      (59, Coal),
+      (28, Copper),
+      (12, Unknown),
+    ],
+  ),
+  (
+    area: 4,
+    resources: [
+      (54, Coal),
+      (32, Copper),
+      (13, Unknown),
+    ],
+  ),
+  (
+    area: 5,
+    resources: [
+      (48, Coal),
+      (36, Copper),
+      (11, Iron),
+      (3,  Unknown),
+    ],
+  ),
+  (
+    area: 6,
+    resources: [
+      (43, Coal),
+      (40, Copper),
+      (12, Iron),
+      (3,  Unknown),
+    ],
+  ),
+  (
+    area: 7,
+    resources: [
+      (45, Copper),
+      (38, Coal),
+      (13, Iron),
+      (3,  Unknown),
+    ],
+  ),
+  (
+    area: 8,
+    resources: [
+      (49, Copper),
+      (33, Coal),
+      (14, Iron),
+      (3,  Unknown),
+    ],
+  ),
+  (
+    area: 9,
+    resources: [
+      (53, Copper),
+      (27, Coal),
+      (15, Iron),
+      (3,  Unknown),
+    ],
+  ),
+  (
+    area: 10,
+    resources: [
+      (57, Copper),
+      (22, Coal),
+      (16, Iron),
+      (3,  Unknown),
+    ],
+  ),
+  (
+    area: 11,
+    resources: [
+      (61, Copper),
+      (17, Iron),
+      (17, Coal),
+      (3,  Unknown),
+    ],
+  ),
+  (
+    area: 12,
+    resources: [
+      (65, Copper),
+      (18, Iron),
+      (12, Coal),
+      (3,  Unknown),
+    ],
+  ),
+  (
+    area: 13,
+    resources: [
+      (100, Copper),
+    ],
+  ),
+  (
+    area: 14,
+    resources: [
+      (70, Copper),
+      (30, Iron),
+    ],
+  ),
+  (
+    area: 15,
+    resources: [
+      (58, Copper),
+      (19, Iron),
+      (22, Unknown),
+    ],
+  ),
+  (
+    area: 16,
+    resources: [
+      (52, Copper),
+      (19, Iron),
+      (15, Amber),
+      (13, Unknown),
+    ],
+  ),
+  (
+    area: 17,
+    resources: [
+      (46, Copper),
+      (20, Amber),
+      (19, Iron),
+      (14, Unknown),
+    ],
+  ),
+  (
+    area: 18,
+    resources: [
+      (30, Copper),
+      (25, Amber),
+      (18, Iron),
+      (15, Unknown),
+    ],
+  ),
+  (
+    area: 19,
+    resources: [
+      (35, Copper),
+      (30, Amber),
+      (18, Iron),
+      (17, Unknown),
+    ],
+  ),
+  (
+    area: 20,
+    resources: [
+      (35, Amber),
+      (29, Copper),
+      (18, Iron),
+      (11, Aluminium),
+      (6,  Unknown),
+    ],
+  ),
+  (
+    area: 21,
+    resources: [
+      (40, Amber),
+      (23, Copper),
+      (18, Iron),
+      (15, Aluminium),
+      (5,  Unknown),
+    ],
+  ),
+  (
+    area: 22,
+    resources: [
+      (45, Amber),
+      (17, Iron),
+      (17, Copper),
+      (15, Aluminium),
+      (5,  Unknown),
+    ],
+  ),
+  (
+    area: 23,
+    resources: [
+      (50, Amber),
+      (17, Iron),
+      (16, Aluminium),
+      (11, Copper),
+      (4,  Unknown),
+    ],
+  ),
+  (
+    area: 24,
+    resources: [
+      (55, Amber),
+      (18, Aluminium),
+      (17, Iron),
+      (9,  Unknown),
+    ],
+  ),
+  (
+    area: 25,
+    resources: [
+      (100, Amber),
+    ],
+  ),
+  (
+    area: 26,
+    resources: [
+      (70, Amber),
+      (30, Aluminium),
+    ],
+  ),
+  (
+    area: 27,
+    resources: [
+      (50, Amber),
+      (26, Aluminium),
+      (19, Iron),
+      (4,  Unknown),
+    ],
+  ),
+  (
+    area: 28,
+    resources: [
+      (45, Amber),
+      (30, Aluminium),
+      (20, Iron),
+      (5,  Unknown),
+    ],
+  ),
+  (
+    area: 29,
+    resources: [
+      (40, Amber),
+      (33, Aluminium),
+      (21, Iron),
+      (5,  Unknown),
+    ],
+  ),
+  (
+    area: 30,
+    resources: [
+      (36, Aluminium),
+      (35, Amber),
+      (22, Iron),
+      (6,  Unknown),
+    ],
+  ),
+  (
+    area: 31,
+    resources: [
+      (40, Aluminium),
+      (30, Amber),
+      (23, Iron),
+      (6,  Unknown),
+    ],
+  ),
+  (
+    area: 32,
+    resources: [
+      (43, Aluminium),
+      (25, Amber),
+      (24, Iron),
+      (7,  Unknown),
+    ],
+  ),
+  (
+    area: 33,
+    resources: [
+      (46, Aluminium),
+      (25, Iron),
+      (19, Amber),
+      (8,  Unknown),
+    ],
+  ),
+]

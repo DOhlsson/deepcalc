@@ -30,6 +30,7 @@ pub enum ResourceType {
     AmberCharger,
     Battery,
     Circuits,
+    Unknown,
     Last, // Always last, could be used to calculate the length of this enum
 }
 
@@ -55,4 +56,10 @@ pub struct Recipe {
     pub consumes: Vec<(i32, ResourceType)>,
     pub building: Building,
     pub time: i32,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Mine {
+    pub area: i32,
+    pub resources: Vec<(i32, ResourceType)>, // Resources by percent
 }

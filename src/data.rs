@@ -4,6 +4,7 @@ use prettytable::Table;
 pub struct Data {
     resources: Vec<Resource>,
     recipes: Vec<Recipe>,
+    mines: Vec<Mine>,
 }
 
 #[derive(Debug)]
@@ -17,8 +18,12 @@ pub struct Evaluation {
 }
 
 impl Data {
-    pub fn new(resources: Vec<Resource>, recipes: Vec<Recipe>) -> Self {
-        Data { resources, recipes }
+    pub fn new(resources: Vec<Resource>, recipes: Vec<Recipe>, mines: Vec<Mine>) -> Self {
+        Data {
+            resources,
+            recipes,
+            mines,
+        }
     }
 
     pub fn print_resources(&self) {
@@ -29,6 +34,20 @@ impl Data {
             table.add_row(row![
                 format!("{:?}", resource.resource_type),
                 resource.price,
+            ]);
+        }
+
+        table.printstd();
+    }
+
+    pub fn print_mines(&self) {
+        let mut table = Table::new();
+        table.add_row(row!["Area", "Resources (%)",]);
+
+        for mine in &self.mines {
+            table.add_row(row![
+                format!("{}", mine.area),
+                bill_as_string(&mine.resources),
             ]);
         }
 
