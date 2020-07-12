@@ -23,12 +23,11 @@ impl Data {
 
     pub fn print_resources(&self) {
         let mut table = Table::new();
-        table.add_row(row!["Type", "Source", "Price",]);
+        table.add_row(row!["Type", "Price",]);
 
         for resource in &self.resources {
             table.add_row(row![
                 format!("{:?}", resource.resource_type),
-                format!("{:?}", resource.source),
                 resource.price,
             ]);
         }

@@ -28,7 +28,7 @@ fn load_data<T: serde::de::DeserializeOwned>(path: &str) -> Vec<T> {
     return match from_reader(reader) {
         Ok(x) => x,
         Err(e) => {
-            eprintln!("Error deserializing: {}", e);
+            eprintln!("Error deserializing file {}: {}", path, e);
             std::process::exit(1);
         }
     };

@@ -1,142 +1,114 @@
 [
   (
     resource_type: Coal,
-    source: Mine,
     price: 1,
   ),
   (
     resource_type: Copper,
-    source: Mine,
     price: 2,
   ),
   (
     resource_type: Iron,
-    source: Mine,
     price: 3,
   ),
   (
     resource_type: Amber,
-    source: Mine,
     price: 4,
   ),
   (
     resource_type: Water,
-    source: WaterCollector,
     price: 5,
   ),
   (
     resource_type: Aluminium,
-    source: Mine,
     price: 5,
   ),
   (
     resource_type: Silver,
-    source: Mine,
     price: 7,
   ),
   (
     resource_type: TreeSeed,
-    source: Mine,
     price: 10,
   ),
   (
     resource_type: Gold,
-    source: Mine,
     price: 10,
   ),
   (
     resource_type: CopperBar,
-    source: Smelt,
     price: 25,
   ),
   (
     resource_type: IronBar,
-    source: Smelt,
     price: 40,
   ),
   (
     resource_type: AluminiumBar,
-    source: Smelt,
     price: 50,
   ),
   (
     resource_type: Silicon,
-    source: ChemicalMine,
     price: 100,
   ),
   (
     resource_type: Hydrogen,
-    source: Chemistry,
     price: 400,
   ),
   (
     resource_type: Glass,
-    source: Smelt,
     price: 450,
   ),
   (
     resource_type: LabFlask,
-    source: Craft,
     price: 800,
   ),
   (
     resource_type: Oxygen,
-    source: Chemistry,
     price: 900,
   ),
   (
     resource_type: CleanWater,
-    source: Chemistry,
     price: 1200,
   ),
   (
     resource_type: AluminiumBottle,
-    source: Craft,
     price: 55,
   ),
   (
     resource_type: CopperNail,
-    source: Craft,
     price: 7,
   ),
   (
     resource_type: InsulatedWire,
-    source: Craft,
     price: 750,
   ),
   (
     resource_type: Graphite,
-    source: Craft,
     price: 15,
   ),
   (
     resource_type: Wire,
-    source: Craft,
     price: 15,
   ),
   (
     resource_type: AmberInsulation,
-    source: Craft,
     price: 125,
   ),
   (
     resource_type: Lamp,
-    source: Craft,
     price: 760,
   ),
   (
     resource_type: AmberCharger,
-    source: Craft,
     price: 4,
   ),
   (
     resource_type: Battery,
-    source: Craft,
     price: 200,
   ),
   (
     resource_type: Circuits,
-    source: Craft,
     price: 2070,
   ),
 ]
